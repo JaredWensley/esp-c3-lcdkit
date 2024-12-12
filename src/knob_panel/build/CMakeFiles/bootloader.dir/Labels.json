@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

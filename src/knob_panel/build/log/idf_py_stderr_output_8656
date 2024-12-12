@@ -1,0 +1,22 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbmodem1101 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4004c72a: recv_packet in ROM
+[0m
+[0;33m--- 0x42071e52: _vfprintf_r at /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:654
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x42071e56: _vfprintf_r at /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:654
+0x4038ecbe: esp_log_write at /Users/donovanmccarthy/esp/esp-idf/components/log/log.c:222
+[0m
+[0;33m--- 0x4005890e: memset in ROM
+0x40381290: rtc_isr at /Users/donovanmccarthy/esp/esp-idf/components/esp_hw_support/rtc_module.c:73
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x40380788: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0m

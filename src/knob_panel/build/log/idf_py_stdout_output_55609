@@ -1,0 +1,43 @@
+[1/16] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/main && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py 0x64000 /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/spiffs /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+FAILED: esp-idf/main/CMakeFiles/spiffs_storage_bin /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/main/CMakeFiles/spiffs_storage_bin 
+cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/main && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py 0x64000 /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/spiffs /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+Traceback (most recent call last):
+  File "/Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py", line 431, in create_file
+    block.update_obj(contents_chunk)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py", line 346, in update_obj
+    raise SpiffsFullError()
+SpiffsFullError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py", line 435, in create_file
+    raise SpiffsFullError
+SpiffsFullError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py", line 590, in <module>
+    main()
+    ~~~~^^
+  File "/Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py", line 582, in main
+    spiffs.create_file('/' + os.path.relpath(full_path, args.base_dir).replace('\\', '/'), full_path)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py", line 446, in create_file
+    block = self._create_block()
+  File "/Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py", line 395, in _create_block
+    raise SpiffsFullError('the image size has been exceeded')
+SpiffsFullError: the image size has been exceeded
+[2/16] Performing build step for 'bootloader'
+[1/1] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader/esp-idf/esptool_py && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader/bootloader.bin
+Bootloader binary size 0x55b0 bytes. 0x2a50 bytes (33%) free.
+[3/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+[4/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/ui_clockScreen.c.obj
+[5/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/ui_light_2color.c.obj
+[6/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/ui_menu_new.c.obj
+[7/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_audio.c.obj
+[8/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/ui_washing.c.obj
+[9/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/ui_factory.c.obj
+ninja: build stopped: subcommand failed.

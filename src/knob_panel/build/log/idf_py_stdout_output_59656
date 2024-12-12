@@ -1,0 +1,64 @@
+[1/6] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/esptool_py && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/partition_table/partition-table.bin /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/c3_knob_panel.bin
+c3_knob_panel.bin binary size 0x2ccc40 bytes. Smallest app partition is 0x352000 bytes. 0x853c0 bytes (16%) free.
+[2/6] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/main && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py 0x64000 /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/spiffs /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[3/6] Performing build step for 'bootloader'
+[1/1] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader/esp-idf/esptool_py && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader/bootloader.bin
+Bootloader binary size 0x55b0 bytes. 0x2a50 bytes (33%) free.
+[4/6] No install step for 'bootloader'
+[5/6] Completed 'bootloader'
+[5/6] cd /Users/donovanmccarthy/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/donovanmccarthy/esp/esp-idf -D "SERIAL_TOOL=/Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python;;/Users/donovanmccarthy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;--no-stub;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build -P /Users/donovanmccarthy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/cu.usbmodem101 -b 460800 --before=default_reset --after=hard_reset --no-stub write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x20000 c3_knob_panel.bin 0x8000 partition_table/partition-table.bin 0x372000 storage.bin
+esptool.py v4.8.1
+Serial port /dev/cu.usbmodem101
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 34:b7:da:a1:fc:c4
+Changing baud rate to 460800
+Changed.
+Enabling default SPI flash mode...
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00020000 to 0x002ecfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00372000 to 0x003d5fff...
+Erasing flash...
+SHA digest in image updated
+Took 0.26s to erase flash block
+Writing at 0x00000000... (4 %)
+Writing at 0x00000400... (9 %)
+Writing at 0x00000800... (13 %)
+Writing at 0x00000c00... (18 %)
+Writing at 0x00001000... (22 %)
+Writing at 0x00001400... (27 %)
+Writing at 0x00001800... (31 %)
+Writing at 0x00001c00... (36 %)
+Writing at 0x00002000... (40 %)
+Writing at 0x00002400... (45 %)
+Writing at 0x00002800... (50 %)
+Writing at 0x00002c00... (54 %)
+Writing at 0x00003000... (59 %)
+Writing at 0x00003400... (63 %)
+Writing at 0x00003800... (68 %)
+Writing at 0x00003c00... (72 %)
+Writing at 0x00004000... (77 %)
+Writing at 0x00004400... (81 %)
+Writing at 0x00004800... (86 %)
+Writing at 0x00004c00... (90 %)
+Writing at 0x00005000... (95 %)
+Writing at 0x00005400... (100 %)
+Wrote 22528 bytes at 0x00000000 in 0.3 seconds (526.7 kbit/s)...
+Hash of data verified.
+Erasing flash...
+
+Lost connection, retrying...
+Waiting for the chip to reconnect.
+Connecting....
+
+A serial exception error occurred: Could not configure port: (6, 'Device not configured')
+Note: This error originates from pySerial. It is likely not a problem with esptool, but with the hardware connection or drivers.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+FAILED: CMakeFiles/flash /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/CMakeFiles/flash 
+cd /Users/donovanmccarthy/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/donovanmccarthy/esp/esp-idf -D "SERIAL_TOOL=/Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python;;/Users/donovanmccarthy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;--no-stub;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build -P /Users/donovanmccarthy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

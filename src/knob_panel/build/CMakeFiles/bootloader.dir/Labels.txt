@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/CMakeFiles/bootloader
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/CMakeFiles/bootloader.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/CMakeFiles/bootloader-complete.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/espressif__esp32_c3_lcdkit",
+		"source" : "managed_components/espressif__esp32_c3_lcdkit"
+	}
+}

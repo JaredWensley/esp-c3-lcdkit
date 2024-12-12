@@ -1,0 +1,1440 @@
+     : 0x000ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420010f4
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (33) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (86) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (93) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (483) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (485) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (575) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (580) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (607) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (615) app_init: App version:      e2bf30b[0m
+[0;32mI (620) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (626) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (631) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (636) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (664) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (671) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (678) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (693) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (712) coexist: coexist rom version 9387209[0m
+[0;32mI (717) main_task: Started on CPU0[0m
+[0;32mI (720) main_task: Calling app_main()[0m
+[0;32mI (725) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (734) LVGL: Starting LVGL task[0m
+[0;32mI (735) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (743) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (870) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m
+[0;32mI (569) esp_image: segment 4: paddr=0031ac68 vaddr=40389724 size=07520h ( 29984) load[0m
+[0;32mI (574) esp_image: segment 5: paddr=00322190 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (579) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (581) boot: Disabling RNG early entropy source...[0m
+[0;32mI (598) cpu_start: Unicore app[0m
+[0;32mI (606) cpu_start: Pro cpu start user code[0m
+[0;32mI (606) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (606) app_init: Application information:[0m
+[0;32mI (609) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (614) app_init: App version:      e2bf30b[0m
+[0;32mI (619) app_init: Compile time:     Dec  5 2024 19:03:57[0m
+[0;32mI (625) app_init: ELF file SHA256:  5e146b0c8...[0m
+[0;32mI (630) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (635) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (640) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (645) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (650) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (657) heap_init: At 3FC9C8B0 len 00023750 (141 KiB): RAM[0m
+[0;32mI (663) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (670) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (677) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (684) spi_flash: detected chip: generic[0m
+[0;32mI (688) spi_flash: flash io: qio[0m
+[0;32mI (692) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (699) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (706) coexist: coex firmware version: 4482466[0m
+[0;32mI (711) coexist: coexist rom version 9387209[0m
+[0;32mI (716) main_task: Started on CPU0[0m
+[0;32mI (719) main_task: Calling app_main()[0m
+[0;32mI (724) main: Compile time: Dec  5 2024 19:04:06[0m
+[0;32mI (733) LVGL: Starting LVGL task[0m
+[0;32mI (734) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (742) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;31mE (869) LVGL: lvgl_port_add_disp(283): Not enough memory for LVGL buffer (buf1) allocation![0m
+
+assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))
+Core  0 register dump:
+MEPC    : 0x4038081a  RA      : 0x4038756c  SP      : 0x3fc9f770  GP      : 0x3fc91600  
+TP      : 0x3fc9f940  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000062  S1      : 0x00000001  A0      : 0x3fc9f7ac  A1      : 0x3fc92751  
+A2      : 0x00000001  A3      : 0x00000029  A4      : 0x00000001  A5      : 0x3fc9c000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc9f8e5  
+S4      : 0x3fc92750  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+463	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+#1  0x4038756c in esp_system_abort (details=details@entry=0x3fc9f7ac "assert failed: bsp_display_start_with_config esp32_c3_lcdkit.c:394 (disp = bsp_display_lcd_init(cfg))") at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+#2  0x4038f52e in __assert_func (file=file@entry=0x3c084a41 "", line=line@entry=394, func=<optimized out>, func@entry=0x3c2d1040 <__func__.1> "", expr=expr@entry=0x3c084db4 "") at /Users/donovanmccarthy/esp/esp-idf/components/newlib/assert.c:80
+#3  0x420150aa in bsp_display_start_with_config (cfg=cfg@entry=0x3fc9f8b0) at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:394
+#4  0x42015104 in bsp_display_start () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/espressif__esp32_c3_lcdkit/esp32_c3_lcdkit.c:386
+#5  0x42008eb0 in app_main () at /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_main.c:197
+#6  0x42079a8c in main_task (args=<error reading variable: value has been optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x403887a2 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: 5e146b0c8
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403807d2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  3 2024 17:31:28[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (32) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (92) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (104) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=274780h (2574208) map[0m
+[0;32mI (482) esp_image: segment 1: paddr=002947a8 vaddr=3fc90e00 size=02144h (  8516) load[0m
+[0;32mI (484) esp_image: segment 2: paddr=002968f4 vaddr=40380000 size=09724h ( 38692) load[0m
+[0;32mI (495) esp_image: segment 3: paddr=002a0020 vaddr=42000020 size=7ac40h (502848) map[0m

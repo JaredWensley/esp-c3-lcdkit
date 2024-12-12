@@ -1,0 +1,13 @@
+esptool.py v4.8.1
+Serial port /dev/cu.usbmodem101
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 34:b7:da:a1:fc:c4
+Changing baud rate to 460800
+Changed.
+Enabling default SPI flash mode...
+Erasing flash (this may take a while)...
+
+A fatal error occurred: ESP32-C3 ROM does not support function erase_flash.

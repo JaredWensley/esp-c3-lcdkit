@@ -1,0 +1,65 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbmodem101 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4004c51a: uart_rx_one_char in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4038081a: panic_abort at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+0x40387384: __ubsan_include at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x403807d2: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4038081a: panic_abort at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+0x40387384: __ubsan_include at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x403807d2: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4038081a: panic_abort at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+0x40387384: __ubsan_include at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x403807d2: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4038081a: panic_abort at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+0x40387384: __ubsan_include at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x403807d2: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4038081a: panic_abort at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/panic.c:463
+0x40387384: __ubsan_include at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x403807d2: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0m
