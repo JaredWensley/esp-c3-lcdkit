@@ -1,0 +1,336 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c97c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 11 2024 15:22:15[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (33) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (86) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (93) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=23eed8h (2354904) map[0m
+[0;32mI (451) esp_image: segment 1: paddr=0025ef00 vaddr=3fc90400 size=01118h (  4376) load[0m
+[0;32mI (452) esp_image: segment 2: paddr=00260020 vaddr=42000020 size=7beb0h (507568) map[0m
+[0;32mI (530) esp_image: segment 3: paddr=002dbed8 vaddr=3fc91518 size=00dach (  3500) load[0m
+[0;32mI (531) esp_image: segment 4: paddr=002dcc8c vaddr=40380000 size=1024ch ( 66124) load[0m
+[0;32mI (547) esp_image: segment 5: paddr=002ecee0 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (552) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (552) boot: Disabling RNG early entropy source...[0m
+[0;32mI (567) cpu_start: Unicore app[0m
+[0;32mI (576) cpu_start: Pro cpu start user code[0m
+[0;32mI (576) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (576) app_init: Application information:[0m
+[0;32mI (579) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (584) app_init: App version:      e2bf30b-dirty[0m
+[0;32mI (589) app_init: Compile time:     Dec 12 2024 21:58:30[0m
+[0;32mI (595) app_init: ELF file SHA256:  5c2b309c9...[0m
+[0;32mI (601) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (605) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (610) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (615) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (620) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (627) heap_init: At 3FC9BC40 len 000243C0 (144 KiB): RAM[0m
+[0;32mI (633) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (640) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (647) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (654) spi_flash: detected chip: generic[0m
+[0;32mI (658) spi_flash: flash io: qio[0m
+[0;32mI (662) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (669) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (676) main_task: Started on CPU0[0m
+[0;32mI (680) main_task: Calling app_main()[0m
+[0;32mI (684) main: Compile time: Dec 12 2024 21:58:40[0m
+[0;32mI (693) LVGL: Starting LVGL task[0m
+[0;32mI (694) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (702) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;32mI (831) gpio: GPIO[10]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (832) gpio: GPIO[6]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (839) Knob: Iot Knob Config Succeed, encoder A:10, encoder B:6, direction:0, Version: 0.1.5[0m
+[0;32mI (848) button: IoT Button Version: 3.4.0[0m
+[0;32mI (853) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (862) main: Display LVGL demo[0m
+[0;32mI (866) LVGL_PUB: add group for encoder[0m
+[0;32mI (870) lvgl_basic: Enter home page[0m
+[0;32mI (879) lvgl_basic: Init clock time ok, 0x3fc9476c[0m
+[0;32mI (1382) ESP32-C3-LCDKit: BLINK_GPIO setting 8[0m
+[0;32mI (1383) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1395) ESP32-C3-LCDKit: Partition size: total: 369221, used: 365958[0m
+[0;32mI (1396) main_task: Returned from app_main()[0m
+[0;32mI (4967) main_menu: Invalid Enter factory[0m
+[0;32mI (6937) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (6937) ui_light_2color_audio: Queue[0]: 9[0m
+[0;32mI (6937) ui_light_2color_audio: Queue[1]: 9[0m
+[0;32mI (6942) ui_light_2color_audio: Queue[2]: 9[0m
+[0;32mI (6947) ui_light_2color_audio: Playing audio: 8[0m
+[0;32mI (6957) app_audio: play: /spiffs/SeventyFive.mp3[0m
+[0;32mI (6958) app_audio: PLAYING[0m
+[0;32mI (6968) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (6969) Adev_Codec: Open codec device OK[0m
+[0;32mI (8472) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (8472) ui_light_2color_audio: Queue[0]: 9[0m
+[0;32mI (8472) ui_light_2color_audio: Queue[1]: 9[0m
+[0;32mI (8483) ui_light_2color_audio: Queue[2]: 8[0m
+[0;32mI (8483) ui_light_2color_audio: Queue[3]: 7[0m
+[0;32mI (8487) ui_light_2color_audio: Queue[4]: 6[0m
+[0;32mI (8492) ui_light_2color_audio: Queue[5]: 5[0m
+[0;32mI (8497) ui_light_2color_audio: Queue[6]: 5[0m
+[0;32mI (8507) ui_light_2color_audio: Playing audio: 9[0m
+[0;32mI (8510) app_audio: play: /spiffs/OneHundred.mp3[0m
+[0;32mI (8517) app_audio: NEXT[0m
+[0;31mE (8524) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (8525) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (8530) Adev_Codec: Open codec device OK[0m
+[0;32mI (10012) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (10012) ui_light_2color_audio: Queue[0]: 9[0m
+[0;32mI (10012) ui_light_2color_audio: Queue[1]: 8[0m
+[0;32mI (10021) ui_light_2color_audio: Queue[2]: 7[0m
+[0;32mI (10022) ui_light_2color_audio: Queue[3]: 6[0m
+[0;32mI (10027) ui_light_2color_audio: Queue[4]: 5[0m
+[0;32mI (10032) ui_light_2color_audio: Queue[5]: 5[0m
+[0;32mI (10044) ui_light_2color_audio: Queue[6]: 5[0m
+[0;32mI (10044) ui_light_2color_audio: Queue[7]: 5[0m
+[0;32mI (10047) ui_light_2color_audio: Queue[8]: 5[0m
+[0;32mI (10052) ui_light_2color_audio: Playing audio: 9[0m
+[0;32mI (10072) app_audio: play: /spiffs/OneHundred.mp3[0m
+[0;32mI (10078) app_audio: NEXT[0m
+[0;31mE (10086) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (10086) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (10090) Adev_Codec: Open codec device OK[0m
+[0;32mI (11572) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (11572) ui_light_2color_audio: Queue[0]: 8[0m
+[0;32mI (11572) ui_light_2color_audio: Queue[1]: 7[0m
+[0;32mI (11581) ui_light_2color_audio: Queue[2]: 6[0m
+[0;32mI (11582) ui_light_2color_audio: Queue[3]: 5[0m
+[0;32mI (11587) ui_light_2color_audio: Queue[4]: 5[0m
+[0;32mI (11592) ui_light_2color_audio: Queue[5]: 5[0m
+[0;32mI (11604) ui_light_2color_audio: Queue[6]: 5[0m
+[0;32mI (11604) ui_light_2color_audio: Queue[7]: 5[0m
+[0;32mI (11607) ui_light_2color_audio: Playing audio: 9[0m
+[0;32mI (11613) app_audio: play: /spiffs/OneHundred.mp3[0m
+[0;32mI (11620) app_audio: NEXT[0m
+[0;31mE (11628) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (11630) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (11636) Adev_Codec: Open codec device OK[0m
+[0;32mI (13118) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (13118) ui_light_2color_audio: Queue[0]: 7[0m
+[0;32mI (13118) ui_light_2color_audio: Queue[1]: 6[0m
+[0;32mI (13127) ui_light_2color_audio: Queue[2]: 5[0m
+[0;32mI (13128) ui_light_2color_audio: Queue[3]: 5[0m
+[0;32mI (13133) ui_light_2color_audio: Queue[4]: 5[0m
+[0;32mI (13138) ui_light_2color_audio: Queue[5]: 5[0m
+[0;32mI (13150) ui_light_2color_audio: Queue[6]: 5[0m
+[0;32mI (13150) ui_light_2color_audio: Playing audio: 8[0m
+[0;32mI (13154) app_audio: play: /spiffs/SeventyFive.mp3[0m
+[0;32mI (13166) app_audio: NEXT[0m
+[0;31mE (13173) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (13174) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (13178) Adev_Codec: Open codec device OK[0m
+[0;32mI (14659) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (14659) ui_light_2color_audio: Queue[0]: 6[0m
+[0;32mI (14659) ui_light_2color_audio: Queue[1]: 5[0m
+[0;32mI (14668) ui_light_2color_audio: Queue[2]: 5[0m
+[0;32mI (14669) ui_light_2color_audio: Queue[3]: 5[0m
+[0;32mI (14674) ui_light_2color_audio: Queue[4]: 5[0m
+[0;32mI (14679) ui_light_2color_audio: Queue[5]: 5[0m
+[0;32mI (14684) ui_light_2color_audio: Playing audio: 7[0m
+[0;32mI (14693) app_audio: play: /spiffs/Fifty.mp3[0m
+[0;32mI (14708) app_audio: NEXT[0m
+[0;31mE (14715) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (14715) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (14719) Adev_Codec: Open codec device OK[0m
+[0;32mI (16194) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (16194) ui_light_2color_audio: Queue[0]: 5[0m
+[0;32mI (16194) ui_light_2color_audio: Queue[1]: 5[0m
+[0;32mI (16199) ui_light_2color_audio: Queue[2]: 5[0m
+[0;32mI (16210) ui_light_2color_audio: Queue[3]: 5[0m
+[0;32mI (16210) ui_light_2color_audio: Queue[4]: 5[0m
+[0;32mI (16214) ui_light_2color_audio: Playing audio: 6[0m
+[0;32mI (16223) app_audio: play: /spiffs/TwentyFive.mp3[0m
+[0;32mI (16226) app_audio: NEXT[0m
+[0;31mE (16235) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (16237) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (16243) Adev_Codec: Open codec device OK[0m
+[0;32mI (17725) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (17725) ui_light_2color_audio: Queue[0]: 5[0m
+[0;32mI (17725) ui_light_2color_audio: Queue[1]: 5[0m
+[0;32mI (17734) ui_light_2color_audio: Queue[2]: 5[0m
+[0;32mI (17735) ui_light_2color_audio: Queue[3]: 5[0m
+[0;32mI (17740) ui_light_2color_audio: Playing audio: 5[0m
+[0;32mI (17758) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (17773) app_audio: NEXT[0m
+[0;31mE (17780) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (17781) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (17785) Adev_Codec: Open codec device OK[0m
+[0;32mI (19258) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (19258) ui_light_2color_audio: Queue[0]: 5[0m
+[0;32mI (19258) ui_light_2color_audio: Queue[1]: 5[0m
+[0;32mI (19263) ui_light_2color_audio: Queue[2]: 5[0m
+[0;32mI (19268) ui_light_2color_audio: Playing audio: 5[0m
+[0;32mI (19282) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (19292) app_audio: NEXT[0m
+[0;31mE (19299) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (19299) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (19303) Adev_Codec: Open codec device OK[0m
+[0;32mI (20782) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (20782) ui_light_2color_audio: Queue[0]: 5[0m
+[0;32mI (20782) ui_light_2color_audio: Queue[1]: 5[0m
+[0;32mI (20794) ui_light_2color_audio: Playing audio: 5[0m
+[0;32mI (20795) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (20810) app_audio: NEXT[0m
+[0;31mE (20817) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (20818) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (20821) Adev_Codec: Open codec device OK[0m
+[0;32mI (22298) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (22298) ui_light_2color_audio: Queue[0]: 5[0m
+[0;32mI (22298) ui_light_2color_audio: Playing audio: 5[0m
+[0;32mI (22304) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (22328) app_audio: NEXT[0m
+[0;31mE (22335) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (22336) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (22340) Adev_Codec: Open codec device OK[0m
+[0;32mI (23812) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (23812) ui_light_2color_audio: Playing audio: 5[0m
+[0;32mI (23813) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (23824) app_audio: NEXT[0m
+[0;31mE (23831) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (23831) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (23836) Adev_Codec: Open codec device OK[0m
+[0;32mI (26292) app_audio: IDLE[0m
+[0;32mI (27805) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (27805) ui_light_2color_audio: Playing audio: 6[0m
+[0;32mI (27806) app_audio: play: /spiffs/TwentyFive.mp3[0m
+[0;32mI (27811) app_audio: PLAYING[0m
+[0;31mE (27822) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (27823) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (27830) Adev_Codec: Open codec device OK[0m
+[0;32mI (29335) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (29335) ui_light_2color_audio: Queue[0]: 8[0m
+[0;32mI (29335) ui_light_2color_audio: Queue[1]: 9[0m
+[0;32mI (29344) ui_light_2color_audio: Queue[2]: 9[0m
+[0;32mI (29345) ui_light_2color_audio: Playing audio: 7[0m
+[0;32mI (29351) app_audio: play: /spiffs/Fifty.mp3[0m
+[0;32mI (29360) app_audio: NEXT[0m
+[0;31mE (29367) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (29368) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (29374) Adev_Codec: Open codec device OK[0m
+[0;32mI (30856) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (30856) ui_light_2color_audio: Queue[0]: 9[0m
+[0;32mI (30856) ui_light_2color_audio: Queue[1]: 9[0m
+[0;32mI (30865) ui_light_2color_audio: Playing audio: 8[0m
+[0;32mI (30871) app_audio: play: /spiffs/SeventyFive.mp3[0m
+[0;32mI (30881) app_audio: NEXT[0m
+[0;31mE (30888) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (30889) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (30892) Adev_Codec: Open codec device OK[0m
+[0;32mI (32372) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (32372) ui_light_2color_audio: Queue[0]: 9[0m
+[0;32mI (32372) ui_light_2color_audio: Playing audio: 9[0m
+[0;32mI (32386) app_audio: play: /spiffs/OneHundred.mp3[0m
+[0;32mI (32399) app_audio: NEXT[0m
+[0;31mE (32406) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (32407) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (32411) Adev_Codec: Open codec device OK[0m
+[0;32mI (33886) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (33886) ui_light_2color_audio: Playing audio: 9[0m
+[0;32mI (33893) app_audio: play: /spiffs/OneHundred.mp3[0m
+[0;32mI (33894) app_audio: NEXT[0m
+[0;31mE (33903) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (33904) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (33911) Adev_Codec: Open codec device OK[0m
+[0;32mI (36872) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (36872) ui_light_2color_audio: Playing audio: 8[0m
+[0;32mI (36873) app_audio: play: /spiffs/SeventyFive.mp3[0m
+[0;32mI (36897) app_audio: NEXT[0m
+[0;31mE (36904) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (36905) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (36908) Adev_Codec: Open codec device OK[0m
+[0;32mI (38698) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (38698) ui_light_2color_audio: Playing audio: 7[0m
+[0;32mI (38699) app_audio: play: /spiffs/Fifty.mp3[0m
+[0;32mI (38724) app_audio: NEXT[0m
+[0;31mE (38731) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (38732) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (38736) Adev_Codec: Open codec device OK[0m
+[0;32mI (40210) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (40210) ui_light_2color_audio: Queue[0]: 5[0m
+[0;32mI (40210) ui_light_2color_audio: Queue[1]: 5[0m
+[0;32mI (40215) ui_light_2color_audio: Playing audio: 6[0m
+[0;32mI (40230) app_audio: play: /spiffs/TwentyFive.mp3[0m
+[0;32mI (40243) app_audio: NEXT[0m
+[0;31mE (40250) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (40250) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (40254) Adev_Codec: Open codec device OK[0m
+[0;32mI (41731) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (41731) ui_light_2color_audio: Queue[0]: 5[0m
+[0;32mI (41731) ui_light_2color_audio: Playing audio: 5[0m
+[0;32mI (41737) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (41761) app_audio: NEXT[0m
+[0;31mE (41768) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (41769) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (41773) Adev_Codec: Open codec device OK[0m
+[0;32mI (43245) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (43245) ui_light_2color_audio: Playing audio: 5[0m
+[0;32mI (43252) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (43256) app_audio: NEXT[0m
+[0;31mE (43263) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (43264) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (43269) Adev_Codec: Open codec device OK[0m
+[0;32mI (45725) app_audio: IDLE[0m
+[0;32mI (55081) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (55081) ui_light_2color_audio: Playing audio: 6[0m
+[0;32mI (55082) app_audio: play: /spiffs/TwentyFive.mp3[0m
+[0;32mI (55087) app_audio: PLAYING[0m
+[0;31mE (55098) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (55099) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (55106) Adev_Codec: Open codec device OK[0m
+[0;32mI (56611) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (56611) ui_light_2color_audio: Queue[0]: 8[0m
+[0;32mI (56611) ui_light_2color_audio: Queue[1]: 9[0m
+[0;32mI (56620) ui_light_2color_audio: Queue[2]: 9[0m
+[0;32mI (56621) ui_light_2color_audio: Playing audio: 7[0m
+[0;32mI (56627) app_audio: play: /spiffs/Fifty.mp3[0m
+[0;32mI (56636) app_audio: NEXT[0m
+[0;31mE (56643) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (56644) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (56650) Adev_Codec: Open codec device OK[0m
+[0;32mI (58132) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (58132) ui_light_2color_audio: Queue[0]: 9[0m
+[0;32mI (58132) ui_light_2color_audio: Queue[1]: 9[0m
+[0;32mI (58141) ui_light_2color_audio: Playing audio: 8[0m
+[0;32mI (58143) app_audio: play: /spiffs/SeventyFive.mp3[0m
+[0;32mI (58157) app_audio: NEXT[0m
+[0;31mE (58164) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (58165) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (58168) Adev_Codec: Open codec device OK[0m
+[0;32mI (59648) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (59648) ui_light_2color_audio: Queue[0]: 9[0m
+[0;32mI (59648) ui_light_2color_audio: Playing audio: 9[0m
+[0;32mI (59662) app_audio: play: /spiffs/OneHundred.mp3[0m
+[0;32mI (59675) app_audio: NEXT[0m
+[0;31mE (59682) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (59683) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (59687) Adev_Codec: Open codec device OK[0m
+[0;32mI (61162) ui_light_2color_audio: Queue state before playing audio:[0m
+[0;32mI (61162) ui_light_2color_audio: Playing audio: 9[0m
+[0;32mI (61169) app_audio: play: /spiffs/OneHundred.mp3[0m
+[0;32mI (61171) app_audio: NEXT[0m
+[0;31mE (61179) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (61180) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (61187) Adev_Codec: Open codec device OK[0m
+[0;32mI (64242) app_audio: IDLE[0m

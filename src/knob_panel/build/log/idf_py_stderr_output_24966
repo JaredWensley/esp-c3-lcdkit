@@ -1,0 +1,37 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbmodem1101 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4004c97a: usb_uart_rx_one_char in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x40388f0c: xEventGroupSetBits at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c:584
+0x40388ee6: xEventGroupSetBits at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c:579
+[0m
+[0;33m--- 0x40388e24: xEventGroupWaitBits at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c:370
+[0m
+[0;33m--- 0x42007338: usb_serial_jtag_write at /Users/donovanmccarthy/esp/esp-idf/components/esp_driver_usb_serial_jtag/src/usb_serial_jtag_vfs.c:147
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x40380788: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x40388f0c: xEventGroupSetBits at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c:584
+0x40388ee6: xEventGroupSetBits at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c:579
+[0m
+[0;33m--- 0x40388e24: xEventGroupWaitBits at /Users/donovanmccarthy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c:370
+[0m
+[0;33m--- 0x42007338: usb_serial_jtag_write at /Users/donovanmccarthy/esp/esp-idf/components/esp_driver_usb_serial_jtag/src/usb_serial_jtag_vfs.c:147
+[0m
+[0;33m--- 0x40380001: _vector_table at /Users/donovanmccarthy/esp/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x40380788: esp_restart_noos at /Users/donovanmccarthy/esp/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:110
+[0m
+[0m

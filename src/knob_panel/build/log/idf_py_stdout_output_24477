@@ -1,0 +1,28 @@
+[1/10] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/main && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/spiffs/spiffsgen.py 0x64000 /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/spiffs /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader/esp-idf/esptool_py && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/bootloader/bootloader.bin
+Bootloader binary size 0x55b0 bytes. 0x2a50 bytes (33%) free.
+[3/10] No install step for 'bootloader'
+[4/10] Completed 'bootloader'
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_audio.c.obj
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_audio.c: In function 'audio_play_start':
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_audio.c:177:36: warning: passing argument 1 of 'audio_player_callback_register' from incompatible pointer type [-Wincompatible-pointer-types]
+  177 |     audio_player_callback_register(audio_callback, NULL);
+      |                                    ^~~~~~~~~~~~~~
+      |                                    |
+      |                                    void (*)(audio_player_cb_ctx_t *, struct EventGroupDef_t *)
+In file included from /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/main/app_audio.c:21:
+/Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/managed_components/chmorgan__esp-audio-player/include/audio_player.h:145:60: note: expected 'audio_player_cb_t' {aka 'void (*)(audio_player_cb_ctx_t *)'} but argument is of type 'void (*)(audio_player_cb_ctx_t *, struct EventGroupDef_t *)'
+  145 | esp_err_t audio_player_callback_register(audio_player_cb_t call_back, void *user_ctx);
+      |                                          ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+[6/10] Linking C static library esp-idf/main/libmain.a
+[7/10] Generating ld/sections.ld
+[8/10] Linking CXX executable c3_knob_panel.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/c3_knob_panel.bin
+[10/10] cd /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/esp-idf/esptool_py && /Users/donovanmccarthy/.espressif/python_env/idf5.3_py3.13_env/bin/python /Users/donovanmccarthy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/partition_table/partition-table.bin /Users/donovanmccarthy/esp-dev-kits/esp32-c3-lcdkit/examples/knob_panel/build/c3_knob_panel.bin
+c3_knob_panel.bin binary size 0x2cd390 bytes. Smallest app partition is 0x352000 bytes. 0x84c70 bytes (16%) free.

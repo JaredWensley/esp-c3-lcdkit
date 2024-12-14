@@ -1,0 +1,112 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c62e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 11 2024 15:22:15[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (33) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (86) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (93) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=23edf8h (2354680) map[0m
+[0;32mI (451) esp_image: segment 1: paddr=0025ee20 vaddr=3fc90400 size=011f8h (  4600) load[0m
+[0;32mI (452) esp_image: segment 2: paddr=00260020 vaddr=42000020 size=7bdb4h (507316) map[0m
+[0;32mI (530) esp_image: segment 3: paddr=002dbddc vaddr=3fc915f8 size=00ccch (  3276) load[0m
+[0;32mI (531) esp_image: segment 4: paddr=002dcab0 vaddr=40380000 size=10278h ( 66168) load[0m
+[0;32mI (547) esp_image: segment 5: paddr=002ecd30 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (552) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (552) boot: Disabling RNG early entropy source...[0m
+[0;32mI (567) cpu_start: Unicore app[0m
+[0;32mI (575) cpu_start: Pro cpu start user code[0m
+[0;32mI (576) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (576) app_init: Application information:[0m
+[0;32mI (578) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (584) app_init: App version:      e2bf30b-dirty[0m
+[0;32mI (589) app_init: Compile time:     Dec 11 2024 15:22:20[0m
+[0;32mI (595) app_init: ELF file SHA256:  8bd37c353...[0m
+[0;32mI (601) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (605) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (610) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (615) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (620) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (627) heap_init: At 3FC9BC40 len 000243C0 (144 KiB): RAM[0m
+[0;32mI (633) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (640) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (647) heap_init: At 50000204 len 00001DE4 (7 KiB): RTCRAM[0m
+[0;32mI (654) spi_flash: detected chip: generic[0m
+[0;32mI (658) spi_flash: flash io: qio[0m
+[0;32mI (662) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (669) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (676) main_task: Started on CPU0[0m
+[0;32mI (680) main_task: Calling app_main()[0m
+[0;32mI (684) main: Compile time: Dec 12 2024 19:19:49[0m
+[0;32mI (693) LVGL: Starting LVGL task[0m
+[0;32mI (694) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (702) gc9a01: LCD panel create success, version: 1.2.0[0m
+[0;32mI (831) gpio: GPIO[10]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (832) gpio: GPIO[6]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (839) Knob: Iot Knob Config Succeed, encoder A:10, encoder B:6, direction:0, Version: 0.1.5[0m
+[0;32mI (848) button: IoT Button Version: 3.4.0[0m
+[0;32mI (853) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (862) main: Display LVGL demo[0m
+[0;32mI (866) LVGL_PUB: add group for encoder[0m
+[0;32mI (870) lvgl_basic: Enter home page[0m
+[0;32mI (879) lvgl_basic: Init clock time ok, 0x3fc9476c[0m
+[0;32mI (1382) ESP32-C3-LCDKit: BLINK_GPIO setting 8[0m
+[0;32mI (1383) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1395) ESP32-C3-LCDKit: Partition size: total: 369221, used: 365958[0m
+[0;32mI (1397) main_task: Returned from app_main()[0m
+[0;32mI (5477) main_menu: Invalid Enter factory[0m
+[0;32mI (10433) ui_light_2color_audio: Playing audio for brightness: 75%[0m
+[0;32mI (10438) app_audio: play: /spiffs/SeventyFive.mp3[0m
+[0;32mI (10438) app_audio: PLAYING[0m
+[0;32mI (10445) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (10446) Adev_Codec: Open codec device OK[0m
+[0;32mI (10449) ui_light_2color_audio: Playing done [0m
+[0;32mI (12711) ui_light_2color_audio: Playing audio for brightness: 50%[0m
+[0;32mI (12712) app_audio: play: /spiffs/Fifty.mp3[0m
+[0;32mI (12713) ui_light_2color_audio: Playing done [0m
+[0;32mI (12727) app_audio: NEXT[0m
+[0;31mE (12735) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (12735) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (12739) Adev_Codec: Open codec device OK[0m
+[0;32mI (14730) app_audio: IDLE[0m
+[0;32mI (16403) ui_light_2color_audio: Playing audio for brightness: 25%[0m
+[0;32mI (16406) app_audio: play: /spiffs/TwentyFive.mp3[0m
+[0;32mI (16406) app_audio: PLAYING[0m
+[0;31mE (16414) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (16416) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (16423) Adev_Codec: Open codec device OK[0m
+[0;32mI (16427) ui_light_2color_audio: Playing done [0m
+[0;32mI (18310) ui_light_2color_audio: Playing audio for brightness: 0%[0m
+[0;32mI (18315) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (18315) ui_light_2color_audio: Playing done [0m
+[0;32mI (18326) app_audio: NEXT[0m
+[0;31mE (18333) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (18333) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (18337) Adev_Codec: Open codec device OK[0m
+[0;32mI (20793) app_audio: IDLE[0m
+[0;32mI (21574) ui_light_2color_audio: Playing audio for brightness: 0%[0m
+[0;32mI (21574) app_audio: play: /spiffs/Zero.mp3[0m
+[0;32mI (21574) app_audio: PLAYING[0m
+[0;31mE (21585) i2s_common: i2s_channel_disable(1107): the channel has not been enabled yet[0m
+[0;32mI (21586) I2S_IF: channel mode 1 bits:16/16 channel:2 mask:3[0m
+[0;32mI (21593) Adev_Codec: Open codec device OK[0m
+[0;32mI (21598) ui_light_2color_audio: Playing done [0m
+[0;32mI (24049) app_audio: IDLE[0m

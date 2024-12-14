@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
-#include "freertos/event_groups.h"
 #include "freertos/task.h"
 #include "esp_task_wdt.h"
 #include "esp_check.h"
@@ -16,13 +15,14 @@
 #include "esp_timer.h"
 #include "esp_spiffs.h"
 #include "esp_vfs.h"
-
+#include "freertos/event_groups.h"
 #include "app_audio.h"
 #include "audio_player.h"
 #include "bsp/esp-bsp.h"
 
 static const char *TAG = "app_audio";
 
+//static EventGroupHandle_t event_group;
 static esp_codec_dev_handle_t play_dev_handle;
 
 static esp_err_t bsp_audio_reconfig_clk(uint32_t rate, uint32_t bits_cfg, i2s_slot_mode_t ch);
@@ -100,6 +100,7 @@ static esp_err_t app_mute_function(AUDIO_PLAYER_MUTE_SETTING setting)
 
 static void audio_callback(audio_player_cb_ctx_t *ctx)
 {
+
     switch (ctx->audio_event) {
     case AUDIO_PLAYER_CALLBACK_EVENT_IDLE: /**< Player is idle, not playing audio */
         ESP_LOGI(TAG, "IDLE");
@@ -167,6 +168,6 @@ esp_err_t audio_play_start()
         .priority = 5
     };
     ESP_ERROR_CHECK(audio_player_new(config));
-    audio_player_callback_register(audio_callback, NULL);
+    audio_player_callback_register(audio_callback,NULL);
     return ret;
 }

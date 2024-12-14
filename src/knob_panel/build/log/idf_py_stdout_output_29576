@@ -1,0 +1,41 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c632
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x18a8
+load:0x403cc710,len:0xd68
+load:0x403ce710,len:0x2f40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 11 2024 15:22:15[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (33) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (42) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 fctry            WiFi data        01 02 00010000 00006000[0m
+[0;32mI (86) boot:  3 factory          factory app      00 00 00020000 00352000[0m
+[0;32mI (93) boot:  4 storage          Unknown data     01 82 00372000 00064000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00020020 vaddr=3c080020 size=23ef68h (2355048) map[0m
+[0;32mI (451) esp_image: segment 1: paddr=0025ef90 vaddr=3fc90800 size=01088h (  4232) load[0m
+[0;32mI (452) esp_image: segment 2: paddr=00260020 vaddr=42000020 size=7bd88h (507272) map[0m
+[0;32mI (530) esp_image: segment 3: paddr=002dbdb0 vaddr=3fc91888 size=00e3ch (  3644) load[0m
+[0;32mI (531) esp_image: segment 4: paddr=002dcbf4 vaddr=40380000 size=106dch ( 67292) load[0m
+[0;32mI (547) esp_image: segment 5: paddr=002ed2d8 vaddr=50000200 size=00004h (     4) load[0m
+[0;32mI (552) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (552) boot: Disabling RNG early entropy source...[0m
+[0;32mI (568) cpu_start: Unicore app[0m
+[0;32mI (576) cpu_start: Pro cpu start user code[0m
+[0;32mI (576) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (576) app_init: Application information:[0m
+[0;32mI (579) app_init: Project name:     c3_knob_panel[0m
+[0;32mI (584) app_init: App version:      e2bf30b-dirty[0m
+[0;32mI (589) app_init: Compile time:     Dec 11 2024 15:22:20[0m
